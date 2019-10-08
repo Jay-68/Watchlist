@@ -7,6 +7,9 @@ def index():
   '''
   View root page function that returns the index page and its data
   '''
+  title='Home - Welcome to the best Movie Review Website online'
+  return render_template('index.html',title=title)
+
   message='Hello World Domination!'
   # passed as an argument in the render_template..
   # the message is a variable block used in the index
