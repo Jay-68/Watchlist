@@ -6,9 +6,17 @@
 
 <head>
   <meta charset="utf-8">
-  {%if title%}
+  {% if title %}
   <title {{title}}></title>
-  {%endif%}
+  {% endif %}
 </head>
-
+<body>
+  <!-- popular movies section -->
+  <h3>Popular movies</h3>
+  <ul>
+    {% for popular_movie in popular %}
+      <li>{{ popular_movie.title }}</li>
+    {{% endfor %}}
+  </ul>
+</body>
 </html>
