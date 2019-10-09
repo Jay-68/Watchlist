@@ -10,27 +10,24 @@
   <title {{title}}></title>
   {% endif %}
 </head>
+
+{% import 'macros.html' as macro %}
+
 <body>
   <!-- popular movies section -->
   <h3>Popular movies</h3>
   <ul>
-    {% for popular_movie in popular %}
-      <li>{{ popular_movie.title }}</li>
-    {% endfor %}
+      <li>{{ macro.displayMovieList(popular) }}</li>
   </ul>
   <!-- Upcoming movies -->
   <h3>Upcoming Movies</h3>
   <ul>
-    {%for upcoming_movie in upcoming%}
-      <li>{{upcoming_movie.title}}</li>
-    {%endfor%}
+      <li>{{macro.displayMovieList(upcoming)}}</li>
   </ul>
   <!-- Now showing Movie -->
   <h3>Now Showing Movie</h3>
   <ul>
-    {%for now_showing_movie in now_showing%}
-      <li>{{now_showing_movie.title}}</li>
-    {%endfor%}
+      <li>{{macro.displayMovieList(now_showing)}}</li>
   </ul>
 </body>
 </html>
