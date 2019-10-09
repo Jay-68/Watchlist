@@ -2,7 +2,7 @@ class config:
   '''
   general configuration parent class
   '''
-  pass
+  MOVIE_API_BASE_URL='https://api.themoviedb.org/3/movie/550?api_key=45ed3a02239eb05dd63482e1b2f310c4'
 
 class prodConfig(config):
   '''
@@ -22,7 +22,7 @@ class DevConfig(config):
   '''
   DEBUG=True
 
-# created three classes. the parent Config class with configurations for both development stages and and production stages. 
+# created three classes. the parent Config class with configurations for both development stages and and production stages.
 # prodConfig subclass inherits from the Config class parent and contains configurations that are used in the production stages
 # the DevConfig subclass contains configurations that are used in the development stages of the application
 # DEBUG=True allows for debugging mode in the application

@@ -2,9 +2,11 @@ from flask import Flask
 from .config import DevConfig
 
 # initializing the application
+# the instance_relative_config allows us to connect to the instance/ folder when the app instance is created
 app=Flask(__name__,instance_relative_config=True)
 
 # setting up configuration
+# the app.config.from.pyfile('config.py connects to the config.py file and all its contents are appended to the app.config)
 app.config.from_object(DevConfig)
 app.config.from_pyfile('config.py')
 
