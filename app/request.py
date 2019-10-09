@@ -9,11 +9,11 @@ Movie=movie.Movie
 
 # getting the api key
 # import the app instance and from it get the api key from the config.py file
-api_key=app.config['MOVIE_API_KEY']
+api_key = app.config['MOVIE_API_KEY']
 
 # getting the movie base url
 # Access our app configuration objects by calling app.config['name_of_object]
-base_url=app.config['MOVIE_API_BASE_URL']
+base_url= app.config['MOVIE_API_BASE_URL']
 
 def get_movies(category):
   '''
