@@ -17,5 +17,5 @@ class MovieTest(unittest.TestCase):
     # isinstance() function checks if the object self.new_movie is an instance of the Movie class.
 
 
-if __name__='__main__':
+if __name__=='__main__':
   unittest.main()
