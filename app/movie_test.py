@@ -4,7 +4,7 @@ Movie=movie.Movie
 
 class MovieTest(unittest.TestCase):
   '''
-  Test class to test the behaviour of the movie class
+  Test class to test the behavior of the movie class
   '''
   def setUp(self):
     '''
