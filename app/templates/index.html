@@ -10,10 +10,14 @@
   <title {{title}}></title>
   {% endif %}
 </head>
-
+{%extends 'base.html'%}
 {% import 'macros.html' as macro %}
 
 <body>
+
+  <!-- content block -->
+  {%block content%}
+
   <!-- popular movies section -->
   <h3>Popular movies</h3>
   <ul>
@@ -29,5 +33,8 @@
   <ul>
       <li>{{macro.displayMovieList(now_showing)}}</li>
   </ul>
+
+  {%endblock%}
+  
 </body>
 </html>

@@ -1,1 +1,35 @@
-<h1>Hello movie {{id}}</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+{%extends 'base.html'%}
+{%import 'macros.html' as macro%}
+
+<body>
+    <!-- content block -->
+    {%block content%}
+
+    <!-- popular movies section -->
+    <h3>Popular movies</h3>
+    <ul>
+        <li>{{ macro.displayMovieList(popular) }}</li>
+    </ul>
+    <!-- Upcoming movies -->
+    <h3>Upcoming Movies</h3>
+    <ul>
+        <li>{{macro.displayMovieList(upcoming)}}</li>
+    </ul>
+    <!-- Now showing Movie -->
+    <h3>Now Showing Movie</h3>
+    <ul>
+        <li>{{macro.displayMovieList(now_showing)}}</li>
+    </ul>
+  
+    {%endblock%}
+</body>
+</html>
