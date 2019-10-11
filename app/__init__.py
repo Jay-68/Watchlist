@@ -1,5 +1,6 @@
 from flask import Flask
 from .config import DevConfig
+from flask_bootstrap import Bootstrap
 
 app = Flask(__name__, instance_relative_config=True)
 
@@ -14,3 +15,7 @@ app.config.from_pyfile('config.py')
 
 # import flask class from flask module and use it to create an app instance of the class flask and pass in the variable __name__
 from app import views
+
+# initializing flask extensions
+# initialized the Bootstrap class by passing in the app instance.Most extensions are initialized this way.
+bootstrap = Bootstrap(app)

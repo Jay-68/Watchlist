@@ -1,0 +1,3 @@
+Install bootstrap extension using pip.
+
+most flask extensions need to be initialized before they can be used. initialize in the __init__.py
