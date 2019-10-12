@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  {%if title in title%}
-  <title>{{title}}</title>
-  {%else%}
-  <title>Welcome to the Best Movie Review Website</title>
-  {%%endif}
-</head>
-<body>
-  <!-- content block -->
-  {% block content %}
+{%extends 'bootstrap/base.html'%}
 
-  {%endblock%}
-</body>
-</html>
+<!-- navbar block -->
+{%block navbar%}
+  <!-- the includes keyword is used to allow multiple sections of our templates to be reused in other templates..like the navbar -->
+  {%include 'navbar.html'%}
+{%endblock%}

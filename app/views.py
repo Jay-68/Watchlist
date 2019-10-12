@@ -1,6 +1,6 @@
 from flask import render_template
 from app import app
-from .request import get_movies
+from .request import get_movies,get_movie
 
 # views
 @app.route('/')
@@ -26,8 +26,11 @@ def index():
 
 @app.route('/movie/<int:movie_id>')
 def movie(movie_id):
-  '''
-  view movie page functions that returns the movie details page and its data
-  '''
-  return render_template('movie.html',id=movie_id)
+    '''
+    view movie page functions that returns the movie details page and its data
+    '''
+    movie=get_movie(id)
+    title=f'{movie.title}'
+
+  return render_template('movie.html',title=title,movie=movie)
   # add a new route with a movie function and a dynamic route <> which returns a response of a movie.html

@@ -1,7 +1,9 @@
 from flask import Flask
 from .config import DevConfig
+# initializing the bootstrap flask extension
 from flask_bootstrap import Bootstrap
 
+# initializing the application
 app = Flask(__name__, instance_relative_config=True)
 
 # the app.config.from.pyfile('config.py connects to the config.py file and all its contents are appended to the app.config)
