@@ -1,7 +1,5 @@
-{%extends 'bootstrap/base.html'%}
-
-<!-- navbar block -->
-{%block navbar%}
-  <!-- the includes keyword is used to allow multiple sections of our templates to be reused in other templates..like the navbar -->
-  {%include 'navbar.html'%}
-{%endblock%}
+{% extends 'bootstrap/base.html'%}
+<!-- Navbar block  --> 
+{% block navbar %}
+    {% include 'navbar.html' %}
+{% endblock %}
